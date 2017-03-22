@@ -16,12 +16,15 @@
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-  if(len(s)>=3):
-    if(s[-3:] != 'ing'):
-       s = s + 'ing'
-    else:
-       s = s + 'ly'
+  # +++your code here+++
+  # LAB(begin solution)
+  if len(s) >= 3:
+    if s[-3:] != 'ing': s = s + 'ing'
+    else: s = s + 'ly'
   return s
+  # LAB(replace solution)
+  # return
+  # LAB(end solution)
 
 
 # E. not_bad
@@ -33,11 +36,16 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
+  # +++your code here+++
+  # LAB(begin solution)
   n = s.find('not')
   b = s.find('bad')
   if n != -1 and b != -1 and b > n:
     s = s[:n] + 'good' + s[b+3:]
   return s
+  # LAB(replace solution)
+  # return
+  # LAB(end solution)
 
 
 # F. front_back
@@ -48,15 +56,19 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
+  # +++your code here+++
+  # LAB(begin solution)
+  # Figure out the middle position of each string.
   a_middle = len(a) / 2
   b_middle = len(b) / 2
-  if len(a) % 2 == 1:
+  if len(a) % 2 == 1:  # add 1 if length is odd
     a_middle = a_middle + 1
   if len(b) % 2 == 1:
-    b_middle = b_middle + 1
-  ble = a[:a_middle] + b[:b_middle] + a[a_middle:] + b[b_middle:]
-  return ble
-
+    b_middle = b_middle + 1 
+  return a[:a_middle] + b[:b_middle] + a[a_middle:] + b[b_middle:]
+  # LAB(replace solution)
+  # return
+  # LAB(end solution)
 
 
 # Simple provided test() function used in main() to print
