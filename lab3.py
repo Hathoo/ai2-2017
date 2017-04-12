@@ -98,7 +98,7 @@ def test_average():
     print("Average of first 10 primes is {}".format(avg))
 
 def make_table(key_justify='left', value_justify='right', **kwargs):
-    # Map from human-readable justifications to .format alignment specifiers
+    
     justification = {
         'left': '<',
         'right': '>',
@@ -142,23 +142,23 @@ def nuance_return():
     def say_hello():
         print("Hello!")
 
-    print(say_hello())  # => None
+    print(say_hello())  # None
 
     def echo(arg=None):
         print("arg:", arg)
         return arg
 
-    print(echo())        # => None
-    print(echo(5))       # => 5
-    print(echo("Hello")) # => Hello
+    print(echo())        # None
+    print(echo(5))       # 5
+    print(echo("Hello")) # Hello
 
     def drive(has_car):
         if not has_car:
             return
-        return 100  # miles
+        return 100  # mil
 
-    drive(False)  # => None
-    drive(True)   # => 100
+    drive(False)  # None
+    drive(True)   # 100
 
 """
 TBD
