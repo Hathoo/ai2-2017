@@ -155,6 +155,14 @@ Done!
 
 
 #lab3
+Hello!
+None
+arg: None
+None
+arg: 5
+5
+arg: Hello
+Hello
 I love Python!
 Keyword arguments are great!!!!
 I guess Java is okay...
