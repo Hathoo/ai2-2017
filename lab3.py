@@ -159,10 +159,25 @@ def nuance_return():
 
     drive(False)  # None
     drive(True)   # 100
+    
+def parametersAndObject():
+    def reassign(arr):
+        arr = [4, 1]
+        print("Inside reassign: arr = {}".format(arr))
 
-"""
-TBD
-"""
+    def append_one(arr):
+        arr.append(1) 
+        print("Inside append_one: arr = {}".format(arr))
+
+    l = [4]
+    print("Before reassign: arr={}".format(l))  # => [4]
+    reassign(l)
+    print("After reassign: arr={}".format(l))  # => [4]
+
+    l = [4]
+    print("Before append_one: arr={}".format(l))  # => [4]
+    append_one(l)
+    print("After append_one: arr={}".format(l))  # => [4,1]
 
 if __name__ == '__main__':
     test_speak_excitedly()
