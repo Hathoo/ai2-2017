@@ -224,6 +224,24 @@ def unboundLocalError():
         lst = lst + [4] #w tym miejscu próbujemy stworzyć wewnątrz funkcji zmienną lst wykorzystując ją samą
     foo()
 
+def mutableArgs():
+    def append_twice(a, lst=[]):
+        lst.append(a)
+        lst.append(a)
+        return lst
+    
+    # Works well when the keyword is provided
+    append_twice(1, lst=[4])  # => [4, 1, 1]
+    append_twice(11, lst=[2, 3, 5, 7])  # => [2, 3, 5, 7, 11, 11]
+
+    # But what happens here?
+    print(append_twice(1))
+    print(append_twice(2))
+    print(append_twice(3))
+    # Kolejne wywołania funkcji przekazują sobie wartości listy lst
+    
+    
+    
 if __name__ == '__main__':
     test_speak_excitedly()
     test_average()
