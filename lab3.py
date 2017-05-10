@@ -178,6 +178,34 @@ def parametersAndObject():
     print("Before append_one: arr={}".format(l))  # => [4]
     append_one(l)
     print("After append_one: arr={}".format(l))  # => [4,1]
+    
+def scope():
+    # Case 1
+    x = 10
+
+    def foo():
+    print("(inside foo) x:", x) # x=10
+    y = 5
+    print('value:', x * y)      # value=50
+
+    print("(outside foo) x:", x)    # x=10
+    foo()
+    print("(after foo) x:", x)      # x=10
+    
+    # Case 2
+    x = 10
+
+    def foo():
+    x = 8  # Only added this line - everything else is the same
+    print("(inside foo) x:", x) # x=8
+    y = 5
+    print('value:', x * y)      # value=40
+
+    print("(outside foo) x:", x)    # x=10
+    foo()
+    print("(after foo) x:", x)      # x=10
+
+
 
 if __name__ == '__main__':
     test_speak_excitedly()
