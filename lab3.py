@@ -184,9 +184,9 @@ def scope():
     x = 10
 
     def foo():
-    print("(inside foo) x:", x) # x=10
-    y = 5
-    print('value:', x * y)      # value=50
+        print("(inside foo) x:", x) # x=10
+        y = 5
+        print('value:', x * y)      # value=50
 
     print("(outside foo) x:", x)    # x=10
     foo()
@@ -196,16 +196,33 @@ def scope():
     x = 10
 
     def foo():
-    x = 8  # Only added this line - everything else is the same
-    print("(inside foo) x:", x) # x=8
-    y = 5
-    print('value:', x * y)      # value=40
+        x = 8  # Only added this line - everything else is the same
+        print("(inside foo) x:", x) # x=8
+        y = 5
+        print('value:', x * y)      # value=40
 
     print("(outside foo) x:", x)    # x=10
     foo()
     print("(after foo) x:", x)      # x=10
 
+def unboundLocalError():
+    x = 10
 
+    def foo():
+        print("(inside foo) x:", x)  # We swapped this line
+        x = 8                        # with this one
+        y = 5
+        print('value:', x * y)
+
+    print("(outside foo) x:", x)
+    foo()
+    print("(after foo) x:", x)
+    # funkcja próbuje użyć zmiennej która nie istnieje
+    
+    lst = [1,2,3]
+    def foo():
+        lst = lst + [4] #w tym miejscu próbujemy stworzyć wewnątrz funkcji zmienną lst wykorzystując ją samą
+    foo()
 
 if __name__ == '__main__':
     test_speak_excitedly()
