@@ -178,3 +178,16 @@ Average of first 10 primes is 12.9
 |            song |    Style     |
 | artist_fullname | Taylor $wift |
 ==================================
+
+
+#lab4
+gcd(2,3)= 1
+lcm(1,9)= 9
+fact(3)= 6
+['PyThOn', 'wOrLD']
+>>> generate_triangles()
+<generator object generate_triangles at 0x02E24900>
+>>> triangles_under(5)
+0
+1
+3
