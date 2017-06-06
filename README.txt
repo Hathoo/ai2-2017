@@ -181,13 +181,10 @@ Average of first 10 primes is 12.9
 
 
 #lab4
-gcd(2,3)= 1
-lcm(1,9)= 9
-fact(3)= 6
+gcd(2,10) = 2
+lcm(3,10) = 30
+fact(5) = 120
+fact(7) = 5040
+alpha_score('ABC') = 6
 ['PyThOn', 'wOrLD']
->>> generate_triangles()
-<generator object generate_triangles at 0x02E24900>
->>> triangles_under(5)
-0
-1
-3
+Triangles:  <generator object generate_triangles at 0x030197B0>
